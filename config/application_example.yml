@@ -1,0 +1,2 @@
+# Create application.yml in this dir and add environment variable as shown below with your database password
+DATABASE_PASSWORD: Database password
