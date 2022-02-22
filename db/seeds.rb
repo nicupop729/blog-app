@@ -18,8 +18,8 @@ fifth_post = Post.create(user_id: second_user.id, title: 'Hallo', text: 'This is
 
 Comment.create(post_id: first_post.id, user_id: second_user.id, text: 'Hi Nicu!' )
 Comment.create(post_id: first_post.id, user_id: third_user.id, text: 'Hi Mathew!')
-Comment.create(post_id: second_post.id, user_id: third_user.id, text: 'Hi Max!' )
-Comment.create(post_id: third_post.id, user_id: first_user.id, text: 'Hi Tom!' )
-Comment.create(post_id: third_post.id, user_id: third_user.id, text: 'Hi Tom!' )
-Comment.create(post_id: fifth_post.id, user_id: first_user.id, text: 'Hi Lilly!' )
-Comment.create(post_id: fifth_post.id, user_id: second_user.id, text: 'Hi Lilly!' )
+Comment.create(post_id: first_post.id, user_id: third_user.id, text: 'Hi Max!' )
+Comment.create(post_id: first_post.id, user_id: first_user.id, text: 'Hi Tom!' )
+Comment.create(post_id: first_post.id, user_id: third_user.id, text: 'Hi Tom!' )
+Comment.create(post_id: first_post.id, user_id: first_user.id, text: 'Hi Lilly!' )
+Comment.create(post_id: first_post.id, user_id: second_user.id, text: 'Hi Lilly!' )
