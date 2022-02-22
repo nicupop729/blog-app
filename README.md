@@ -23,6 +23,8 @@ To get a local copy up and running follow these simple example steps.
 - `git clone` this repo
 - `cd` into the generated directory
 - Run `bundle install`
+- In the psql, create a new role with the name of "nicu"
+- export DATABASE_PASSWORD=  <nicu password>  irb 
 - Run `rails db:create` 
 - Run `rails db:migrate` 
 - Run `rails db:seed` 
