@@ -1,5 +1,5 @@
 <div>
-  <h4 class="title">Post n° <%= index + 1 %></h4>
+  <h4 class="title">Post n° <%= index + 1 %>: <%= post.title %></h4>
   <p class="text"><%= post.text %></p>
   <ul class="comm-likes flex-row">
     <li><p>Comments: <%= post.comments_counter ? post.comments_counter : 0 %>,</p></li>
