@@ -1,1 +1,13 @@
-<h1>Here is a list of all the users</h1>
+<main>
+  <ul class="list-users flex-column">
+    <% @users.each do |user| %>    
+      <li class="list_item-users">
+        <%= link_to user_path(user) do %>
+
+          <%= render partial: "user", locals: {user: user} %>
+          
+        <% end %>
+      </li>    
+    <% end %> 
+  </ul>
+</main>
