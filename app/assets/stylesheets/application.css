@@ -13,3 +13,122 @@
  *= require_tree .
  *= require_self
  */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+main {
+  margin: 3rem 1rem;
+}
+
+a:link {
+  text-decoration: none;
+  color: #222;
+}
+
+a:visited {
+  text-decoration: none;
+  color: #222;
+}
+
+.flex-row {
+  display: flex;
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.border {
+  border: 1px solid black;
+}
+
+.title {
+  font-size: 1.5rem;
+}
+
+.text {
+  font-size: 1.3rem;
+  margin-top: 1rem;
+}
+
+.button_to {
+  width: 25%;
+  margin: 2rem auto;
+  padding: 0.5rem;
+}
+
+.btn {
+  width: 100%;
+}
+
+.list-users {
+  gap: 2rem;
+}
+
+.div_list_item-users {
+  gap: 2rem;
+}
+
+.inner-div_list_item-users {
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+}
+
+.photo_users {
+  height: 10rem;
+  width: 9rem;
+}
+
+.users_name {
+  font-size: 2.2rem;
+}
+
+.posts_count {
+  padding-top: 5rem;
+  font-size: 1.5rem;
+}
+
+.user_bio {
+  margin-top: 2rem;
+  padding: 1rem;
+}
+
+.list-user_post {
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.item-user_post {
+  padding: 1rem;
+}
+
+.comm-likes {
+  gap: 1rem;
+  margin-left: 60%;
+  font-size: 1.1rem;
+}
+
+.item-comments {
+  padding: 0.5rem;
+  font-size: 1.2rem;
+}
+
+.item-comments:nth-child(2n) {
+  background-color: silver;
+}
+
+.comments-top {
+  margin-bottom: 2rem;
+  padding: 1rem;
+}

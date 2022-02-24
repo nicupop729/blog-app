@@ -1,2 +1,21 @@
-<h1>Here is the data for a specific user with the following id</h1>
-<%= @user_id %>
+<main>
+
+  <%= render "user", user: @user %>
+  
+  <div class="user_bio border">
+    <h4 class="user_bio_title title">Bio</h4>
+    <p class="user_bio_text text"><%= @user.bio %></p>
+  </div>
+  <div>
+    <ul class="list-user_post flex-column">
+      <% @user_posts.each_with_index do |post, index| %>
+        <li class="item-user_post border">
+                    
+          <%= render partial: "post", locals:{post: post, index: index}  %>
+          
+        </li>
+      <% end %>
+    </ul>
+  </div>
+  <%= button_to 'See all posts', user_posts_path(@user_id), method: :get, class:"btn" %>
+</main>
