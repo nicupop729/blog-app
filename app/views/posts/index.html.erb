@@ -1,2 +1,22 @@
-<h1>Here is a list of posts for a user id</h1>
-<%= @user_id %>
+<main>
+
+<%= render "user", user: @user %>
+  
+  <div>
+    <ul class="list-user_post flex-column">
+      <% @user_posts.each_with_index do |post, index| %>
+        <li class="item-user_post border">
+          <%= link_to user_post_path(@user, post) do%>
+
+            <%= render partial: "post", locals:{post: post, index: index}  %>
+
+            
+            <%= render partial:"comment", locals:{post: post} %>
+            
+          <% end %>  
+        </li>        
+      <% end %>
+    </ul>
+  </div>
+  <%= button_to 'Pagination', user_posts_path(), method: :get, class:"btn" %>
+</main>

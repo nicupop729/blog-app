@@ -1,5 +1,19 @@
-<h1>Here is the data for a specific user with the following id</h1>
-<h2>User Id:</h2>
-<%= @user_id %>
-<h2>Post Id:</h2>
-<%= @post_id %>
+<main>
+  <div class="border comments-top">
+    <div>
+      <h3 class="title">
+        <%= @post.title %> by <%= @post.user.name %>
+      </h3>
+      <ul class="comm-likes flex-row">
+        <li><p>Comments: <%= @post.comments_counter ? @post.comments_counter : 0 %></p></li>
+        <li><p>Likes: <%= @post.likes_counter ? @post.likes_counter : 0  %></p></li>
+      </ul>
+    </div>
+    <div>
+      <p class="text"><%= @post.text %></p>
+    </div>
+  </div>
+
+  <%= render partial:"comment", locals:{post: @post} %>
+
+</main>
