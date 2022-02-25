@@ -7,7 +7,7 @@
     <p class="user_bio_text text"><%= @user.bio %></p>
   </div>
   <div>      
-    <h3 class="title comm-title">Most recent 3 posts</h3>
+    <h3 class="title last-title">Most recent 3 posts</h3>
     <ul class="list-user_post flex-column">
       <% @user_posts.each_with_index do |post, index| %>
         <li class="item-user_post border">
