@@ -15,4 +15,10 @@ class CommentsController < ApplicationController
       render :new, :flash.now => { error: 'Something went wrong with your comment' }
     end
   end
+
+  private
+
+  def comment_params
+    params.require(:comment).permit(:text)
+  end
 end
