@@ -31,6 +31,8 @@
 
           <%= button_to "Comment", new_user_post_comment_path({post_id: post.id, user_id: @user_id}), method: :get, class:"btn"%>
 
+          <%= button_to "Like", user_post_likes_path({post_id: post.id, user_id: @user_id}), method: :post, class:"btn"%> 
+
         </li>        
       <% end %>
     </ul>

@@ -1,8 +1,8 @@
-<div>
+<div class="post-form-container">
   <%= form_with(model: @post, url: user_posts_path, method: :post, local: true) do |form| %>
-    <%= form.label(:title, "Post name") %>
+    <%= form.label(:title, "Post Title") %>
     <%= form.text_field :title %>
-    <%= form.label(:text, "Post message") %>
+    <%= form.label(:text, "Post Message") %>
     <%= form.text_area :text, size: "50x10" %>
     <%= form.submit "Submit post" %>
   <% end %>
