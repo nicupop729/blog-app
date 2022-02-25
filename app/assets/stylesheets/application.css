@@ -113,6 +113,10 @@ a:visited {
   padding: 1rem;
 }
 
+.comm-title {
+  padding: 2rem;
+}
+
 .comm-likes {
   gap: 1rem;
   margin-left: 60%;

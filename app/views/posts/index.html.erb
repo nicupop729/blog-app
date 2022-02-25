@@ -12,9 +12,12 @@
 
             <%= render partial: "post", locals:{post: post, index: index}  %>
           
-            <%= render partial:"comment", locals:{post: post} %>
+            <%= render partial:"comment", locals:{post: post} %>            
             
           <% end %>  
+
+          <%= button_to "Comment", new_user_post_comment_path({post_id: post.id, user_id: @user_id}), method: :get, class:"btn"%>
+
         </li>        
       <% end %>
     </ul>
