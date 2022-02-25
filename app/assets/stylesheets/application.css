@@ -63,7 +63,7 @@ a:visited {
 
 .button_to {
   width: 25%;
-  margin: 2rem auto;
+  margin: 1rem auto;
   padding: 0.5rem;
 }
 
@@ -128,11 +128,35 @@ a:visited {
   font-size: 1.2rem;
 }
 
-.item-comments:nth-child(2n) {
+.item-comments:nth-child(2n+1) {
   background-color: silver;
 }
 
 .comments-top {
   margin-bottom: 2rem;
   padding: 1rem;
+}
+
+.post-form-container,
+.comm-form-container {
+  margin: auto 2rem;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin: 2rem auto;
+  max-width: 40rem;
+}
+
+form label {
+  font-size: 2.4rem;
+}
+
+#post_title,
+#post_text,
+#comment_text {
+  background-color: aquamarine;
+  padding: 0.5rem 1rem;
 }
