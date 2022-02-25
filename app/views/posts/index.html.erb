@@ -1,6 +1,8 @@
 <main>
 
-<%= render "user", user: @user %>
+  <%= render "user", user: @user %>
+
+  <%= button_to "Create new post", new_user_post_path, method: :get, class:"btn"%>
   
   <div>
     <ul class="list-user_post flex-column">
@@ -8,15 +10,34 @@
         <li class="item-user_post border">
           <%= link_to user_post_path(@user, post) do%>
 
-            <%= render partial: "post", locals:{post: post, index: index}  %>
-
+            <%= render partial: "post", locals:{post: post, index: index}  %>            
             
-            <%= render partial:"comment", locals:{post: post} %>
+            <% if post.comments.length > 0 %>
+              <h3 class="title last-title">Last comments</h3>
+              <div class="comments border">
+                <ul>                    
+                  <% post.last_five_comm.each do |comment| %>
+
+                    <%= render partial:"comment", locals:{comment: comment} %>         
+            
+                  <% end %>              
+                </ul>
+              </div>
+            <% else %>
+              <h3 class="title last-title">No comments yet</h3>
+            <% end %>
             
           <% end %>  
+
+          <%= button_to "Comment", new_user_post_comment_path({post_id: post.id, user_id: @user_id}), method: :get, class:"btn"%>
+
+          <%= button_to "Like", user_post_likes_path({post_id: post.id, user_id: @user_id}), method: :post, class:"btn"%> 
+
         </li>        
       <% end %>
     </ul>
   </div>
-  <%= button_to 'Pagination', user_posts_path(), method: :get, class:"btn" %>
+  
+  <%= button_to "Create new post", new_user_post_path, method: :get, class:"btn"%>
+
 </main>

@@ -6,12 +6,17 @@
     <h4 class="user_bio_title title">Bio</h4>
     <p class="user_bio_text text"><%= @user.bio %></p>
   </div>
-  <div>
+  <div>      
+    <h3 class="title last-title">Most recent 3 posts</h3>
     <ul class="list-user_post flex-column">
       <% @user_posts.each_with_index do |post, index| %>
         <li class="item-user_post border">
                     
           <%= render partial: "post", locals:{post: post, index: index}  %>
+          
+          <%= button_to "Comment", new_user_post_comment_path({post_id: post.id, user_id: @user_id}), method: :get, class:"btn"%> 
+
+          <%= button_to "Like", user_post_likes_path({post_id: post.id, user_id: @user_id}), method: :post, class:"btn"%> 
           
         </li>
       <% end %>

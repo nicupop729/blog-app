@@ -1,9 +1,4 @@
-<div class="comments border">
-  <ul>                    
-    <% post.comments.each do |comment| %>
-      <li class="item-comments">
-        <%= comment.user.name %>: <%= comment.text %>
-      </li>
-    <% end %>              
-  </ul>
-</div>
+<li class="item-comments">
+  <%= comment.user.name %>: <%= comment.text %>
+</li>
+      

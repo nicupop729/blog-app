@@ -1,8 +1,7 @@
 <div>
-  <h4 class="title">Post n° <%= index + 1 %></h4>
+  <h4 class="title">Post n° <%= index + 1 %>: <%= post.title %></h4>
   <p class="text"><%= post.text %></p>
-  <ul class="comm-likes flex-row">
-    <li><p>Comments: <%= post.comments_counter ? post.comments_counter : 0 %>,</p></li>
-    <li><p>Likes: <%= post.likes_counter ? post.likes_counter : 0  %></p></li>
-  </ul>
+
+  <%= render partial: "comm_like", locals:{post: post, user_id: @user_id, post_id: post.id}  %>
+
 </div>

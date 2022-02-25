@@ -4,16 +4,31 @@
       <h3 class="title">
         <%= @post.title %> by <%= @post.user.name %>
       </h3>
-      <ul class="comm-likes flex-row">
-        <li><p>Comments: <%= @post.comments_counter ? @post.comments_counter : 0 %></p></li>
-        <li><p>Likes: <%= @post.likes_counter ? @post.likes_counter : 0  %></p></li>
-      </ul>
+
+      <%= render partial: "comm_like", locals:{post: @post}  %>
+      
     </div>
     <div>
       <p class="text"><%= @post.text %></p>
     </div>
   </div>
 
-  <%= render partial:"comment", locals:{post: @post} %>
+  <% if @post.comments.length > 0 %>
+    <div class="comments border">
+      <ul>                    
+        <% @post.comments.each do |comment| %>
+
+          <%= render partial:"comment", locals:{comment: comment} %>         
+
+        <% end %>              
+      </ul>
+    </div>  
+  <% else %>
+    <h3 class="title last-title">No comments yet</h3>
+  <% end %>
+
+  <%= button_to "Comment", new_user_post_comment_path({post_id: @post.id, user_id: @user_id}), method: :get, class:"btn"%>
+
+  <%= button_to "Like", user_post_likes_path({post_id: @post.id, user_id: @user_id}), method: :post, class:"btn"%>
 
 </main>
