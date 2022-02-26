@@ -9,9 +9,9 @@ RSpec.describe 'Users', type: :request do
     end
 
     it "get a user's page" do
-      get '/users/5643'
+      get '/users/3'
       expect(response).to have_http_status(200)
-      expect(response.body).to include('5643')
+      expect(response.body).to include('3')
     end
 
     it 'requesting to the /users path should also return the index' do

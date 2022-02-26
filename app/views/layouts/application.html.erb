@@ -11,6 +11,11 @@
   </head>
 
   <body>
+    <% flash.each do |name, msg| %>
+      <div class="<%= name %>" style="white-space: pre-wrap">
+        <%= msg %>
+      </div>
+    <% end %>
     <%= yield %>
   </body>
 </html>

@@ -1,7 +1,7 @@
 <div class="comm-form-container">
   <%= form_with(model: @comment, url: user_post_comments_path, method: :post, local: true) do |form| %>
     <%= form.label(:text, "Comment") %>
-    <%= form.text_area(:text, size: "30x10") %>
+    <%= form.text_area :text, size: "30x10", required: true %>
     <%= form.submit "Submit comment" %>
   <% end %>
 </div>
