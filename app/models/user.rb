@@ -7,7 +7,7 @@ class User < ApplicationRecord
   has_many :likes
   has_many :comments
 
-  #validates :name, presence: true
+  # validates :name, presence: true
 
   def most_recent_posts
     posts.order(created_at: :desc).limit(3)
