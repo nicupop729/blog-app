@@ -4,7 +4,7 @@ class LikesController < ApplicationController
   end
 
   def create
-    @current_user = User.find(params[:user_id])
+    @current_user = current_user
     @current_post = Post.find(params[:post_id])
     is_liked = Like.where(user: @current_user, post: @current_post).exists?
     redirect_back(fallback_location: root_path)

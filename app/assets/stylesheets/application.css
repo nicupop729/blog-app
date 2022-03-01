@@ -26,7 +26,8 @@ html {
 }
 
 main {
-  margin: 3rem 1rem;
+  margin: 3rem auto;
+  max-width: 70rem;
 }
 
 a:link {
@@ -37,6 +38,13 @@ a:link {
 a:visited {
   text-decoration: none;
   color: #222;
+}
+
+.title-blog {
+  text-align: center;
+  color: #4267b2;
+  font-size: 3rem;
+  margin-top: 3rem;
 }
 
 .flex-row {
@@ -159,4 +167,25 @@ form label {
 #comment_text {
   background-color: aquamarine;
   padding: 0.5rem 1rem;
+}
+
+.log-in {
+  margin-top: 3rem;
+  align-items: center;
+}
+
+.title_log-in {
+  font-size: 3rem;
+}
+
+.new_user input {
+  width: 35rem;
+}
+
+#user_remember_me {
+  width: 2rem;
+}
+
+.log-in-link {
+  width: 100vw;
 }
