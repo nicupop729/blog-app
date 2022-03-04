@@ -6,7 +6,7 @@ RSpec.describe 'New registrations', type: :view do
     User.create(name: 'Test', email: 'test@test.com', password: 'test1234', posts_counter: 0)
   end
 
-  describe  'new registration page' do
+  describe 'new registration page' do
     it 'shows the email field' do
       visit new_user_session_path
       expect(page).to have_field('Email')
