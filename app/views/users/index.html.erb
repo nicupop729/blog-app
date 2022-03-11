@@ -4,9 +4,14 @@
       <li class="list_item-users">
         <%= link_to user_path(user) do %>
 
-          <%= render partial: "user", locals: {user: user} %>
+          <%= render partial: "user", locals: {user: user} %>          
           
+          <% end %>
+          <% if (user == current_user) %>
+            <%= button_to "Logout", destroy_user_session_path, method: :delete %>
         <% end %>
+
+
       </li>    
     <% end %> 
   </ul>
